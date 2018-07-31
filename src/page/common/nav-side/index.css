@@ -1,18 +1,17 @@
 /*
 * @Author: E2
-* @Date:   2018-06-11 10:35:50
+* @Date:   2017-10-20 16:55:28
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-11 17:08:17
+* @Last Modified time: 2017-10-26 10:31:45
 */
 /* 导航主体 */
 .nav-side{
-	float: left;
-	width:130px;
-	min-height: 100px;
+	float:left;
+	width: 130px;
 }
 .nav-side .nav-item{
 	line-height: 25px;
-	font-size: 13px;
+	font-size: 13px;	
 }
 .nav-side .nav-item .link{
 	color: #888;

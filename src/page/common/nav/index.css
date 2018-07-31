@@ -1,12 +1,12 @@
 /*
 * @Author: E2
-* @Date:   2018-06-08 11:41:44
+* @Date:   2017-10-12 17:10:42
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-08 11:52:38
+* @Last Modified time: 2017-10-12 17:42:15
 */
 .nav{
 	background: #eee;
-	height:30px;
+	height: 30px;
 	line-height: 30px;
 }
 /* 用户部分 */
@@ -14,16 +14,16 @@
 	float: left;
 }
 .nav .user.login{
-	display: none;
+	display:none;
 }
 .nav .user .link{
 	margin-right: 5px;
 }
-/* 导航链接部分 */
+/*导航链接部分*/
 .nav .nav-list{
 	float:right;
 }
-.nav .nav-list .nav-item{
+.nav .nav-item{
 	display: inline-block;
 	margin-left: 5px;
 }

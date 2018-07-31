@@ -1,11 +1,10 @@
 /*
 * @Author: E2
-<<<<<<< HEAD
-* @Date:   2018-05-30 17:06:18
+* @Date:   2017-10-10 11:13:34
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-09 10:42:32
+* @Last Modified time: 2017-10-12 18:04:20
 */
+'use strict';
 require('./layout.css');
 require('node_modules/font-awesome/css/font-awesome.min.css');
-require('page/common/nav-simple/index.js');
 require('./footer/index.css');

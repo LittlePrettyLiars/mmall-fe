@@ -1,7 +1,8 @@
 /*
 * @Author: E2
-* @Date:   2018-06-07 16:36:33
+* @Date:   2017-10-12 16:11:04
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-07 16:38:18
+* @Last Modified time: 2017-10-12 16:12:57
 */
-require('./index.css');
+'use strict';
+require('./index.css')

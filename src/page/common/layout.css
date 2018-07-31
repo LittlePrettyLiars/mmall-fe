@@ -1,8 +1,8 @@
 /*
 * @Author: E2
-* @Date:   2018-06-07 11:46:09
+* @Date:   2017-10-12 10:30:29
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-09 11:56:44
+* @Last Modified time: 2018-06-09 11:54:58
 */
 /* css reset */
 *{
@@ -11,10 +11,10 @@
 }
 body{
 	background: #f6f6f6;
-	font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;	
-}	
+	font: 12px/1.5 tahoma,arial,Microsoft YaHei, sans-serif;
+}
 li{
-	list-style:none;
+	list-style: none;
 }
 img{
 	display: block;
@@ -28,12 +28,6 @@ input[type='checkbox']{
 }
 
 /* 定宽布局 */
-/* 其实此处也可使用media查询，但因为上一种方法可以兼容IE，所以为了兼容推荐使用上一种方法 */
-/* @media screen and (max-width: 300px) {
-    body {
-        background-color:lightblue;
-    }
-} */
 /* overflow:hidden实现的效果：
 1.超出边界的东西不显示
 2.清除浮动
@@ -44,7 +38,29 @@ input[type='checkbox']{
 	position: relative;
 	overflow: hidden;
 }
-
+/* 其实此处也可使用media查询，但因为上一种方法可以兼容IE，所以为了兼容推荐使用上一种方法 */
+/* @media screen and (max-width: 300px) {
+    body {
+        background-color:lightblue;
+    }
+} */
+/* panel */
+.panel{
+	padding: 10px;
+	margin-bottom: 10px;
+	background: #fff;
+}
+.panel .panel-title{
+	padding: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	border-bottom: 1px solid #eee;
+}
+.panel .panel-body{
+	padding: 10px;
+	overflow: hidden;
+}
 /* 全局通用样式 */
 /* 隐藏类 */
 .hide{
@@ -59,12 +75,14 @@ input[type='checkbox']{
 .link:hover{
 	color: #e80012;
 }
-.link-text{
+.link{
 	color: #999;
-	text-decoration: none;
 }
-
 /* btn */
+/* 	height: 40px;
+	line-height: 40px;
+	两者一起使用的效果是文字垂直居中 
+*/
 .btn{
 	display: inline-block;
 	padding: 0 20px;
@@ -76,8 +94,8 @@ input[type='checkbox']{
 	font-size: 17px;
 	font-weight: bold;
 	color: #fff;
-	outline:none;
-	cursor:pointer;
+	outline: none;
+	cursor: pointer;
 	text-decoration: none;
 }
 .btn-mini{
@@ -86,15 +104,14 @@ input[type='checkbox']{
 	font-size: 12px;
 	padding: 0 10px;
 }
-
 /* loading */
 .loading{
-	margin: 10px auto;
+	margin:10px auto;
 	display: block;
 	width: 65px;
 	height: 65px;
 	border:1px solid #ddd;
-	background: url(../../image/icon/loading.gif) no-repeat;
 	border-radius: 5px;
-	opacity:.6;
+	background: url(../../image/icon/loading.gif) no-repeat;
+	opacity: .6;
 }

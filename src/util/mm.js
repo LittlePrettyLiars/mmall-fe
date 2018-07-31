@@ -2,8 +2,9 @@
 * @Author: E2
 * @Date:   2018-06-01 15:29:26
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-11 16:07:05
+* @Last Modified time: 2018-07-30 20:52:56
 */
+// 添加hogan组件用于渲染
 var Hogan =require('hogan.js');
 var conf = {
 	//当前接口地址和当前静态文件地址
@@ -21,6 +22,7 @@ var _mm = {
 			success: function(res){
 				//请求成功
 				if(res.status === 0){
+				// && 如果前面的是错误的，因为短路，不会执行后面的，如果前面的是对的，还是要执行后面的代码，这是一种简化
 					typeof param.success === 'function' && param.success(res.data,res.msg);
 				}
 				//没有登录状态，需要强制登录
@@ -39,7 +41,7 @@ var _mm = {
 		});
 	},
 	//获取服务器地址
-	getSeverUrl : function(path) {
+	getServerUrl : function(path) {
 		return conf.serverHost + path;
 	},
 	//获取url参数
@@ -75,13 +77,15 @@ var _mm = {
 		}
 		//邮箱格式验证
 		if(type === 'email'){
-			return /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(value);
+			// return /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/.test(value);
+			return /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/.test(value);
 		}
 	},
 	//统一登录处理
 	doLogin : function(){
-		window.location.href='./login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href='./user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
+	//跳到首页
 	goHome : function(){
 		window.location.href = './index.html';
 	}

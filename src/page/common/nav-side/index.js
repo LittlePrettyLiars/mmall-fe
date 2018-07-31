@@ -1,47 +1,50 @@
 /*
 * @Author: E2
-* @Date:   2018-06-11 10:35:30
+* @Date:   2017-10-12 17:10:52
 * @Last Modified by:   E2
-* @Last Modified time: 2018-06-11 17:04:39
+* @Last Modified time: 2017-10-26 17:04:51
 */
+'use strict';
 require('./index.css');
-
-var _mm           = require('util/mm.js');
-var templateIndex = require('./index.string');
-
+var   _mm 			= require('util/mm.js');
+var   templateIndex = require('./index.string');
 //侧边导航
 var navSide = {
-	option : {
-		name : '',
-		navList : [
-			{name: 'user-center' , desc: '个人中心' , href: './user-center.html'},
-			{name: 'order-list' , desc: '我的订单' , href: './order-list.html'},
-			{name: 'pass-update' , desc: '修改密码' , href: './pass-update.html'},
-			{name: 'about' , desc: '关于MMall' , href: './about.html'}
+	option:{
+		name:'',
+		navList:[
+			{name:'user-center',desc:'个人中心',href:'./user-center.html'},
+			{name:'order-list',desc:'我的订单',href:'./order-list.html'},
+			{name:'user-pass-update',desc:'修改密码',href:'./user-pass-update.html'},
+			{name:'about',desc:'关于MMall',href:'./about.html'}
 		]
 	},
-	init: function(option) {
+	init:function(option){
 		//合并选项
-		$.extend(this.option,option);
-		console.log(this.option);
-		console.log(option);
+		$.extend(this.option, option);
 		this.renderNav();
 	},
 	//渲染导航菜单
-	renderNav : function(){
+	renderNav:function(){
 		//计算active数据
 		for(var i=0,iLength = this.option.navList.length;i < iLength;i++){
 			if( this.option.navList[i].name === this.option.name) {
 				this.option.navList[i].isActive = true;
 			}
 		};
-		//渲染List数据
+		//渲染list数据
 		var navHtml = _mm.renderHtml(templateIndex,{
-			navList : this.option.navList
+			navList :this.option.navList
 		});
-		//把html放入容器
-		$('.nav-side').html(navHtml);
+		//把HTML放入容器
+		$(".nav-side").html(navHtml);
 	}
+	
 };
 
 module.exports = navSide;
+
+
+
+
+
