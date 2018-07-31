@@ -2,19 +2,19 @@
 * @Author: E2
 * @Date:   2017-10-12 17:10:52
 * @Last Modified by:   E2
-* @Last Modified time: 2017-10-20 16:41:20
+* @Last Modified time: 2018-07-31 15:40:11
 */
 'use strict';
 require('./index.css');
 var   _mm = require('util/mm.js');
 var _user = require('service/user-service.js');
-var _cart = require('service/cart-service.js');
+// var _cart = require('service/cart-service.js');
 
 var nav = {
 	init:function(){
 		this.bindEvent();
 		this.loadUserInfo();
-		this.loadCartCount();
+		// this.loadCartCount();
 		return this;
 	},
 
@@ -45,13 +45,13 @@ var nav = {
 		});
 	},
 	//加载购物车数量
-	loadCartCount: function(){
-		_cart.getCartCount(function(res){
-			$('.nav .cart-count').text(res||0);
-		},function(errMsg){
-			$('.nav .cart-count').text(0);
-		});
-	}
+	// loadCartCount: function(){
+	// 	_cart.getCartCount(function(res){
+	// 		$('.nav .cart-count').text(res||0);
+	// 	},function(errMsg){
+	// 		$('.nav .cart-count').text(0);
+	// 	});
+	// }
 };
 
 module.exports = nav.init();

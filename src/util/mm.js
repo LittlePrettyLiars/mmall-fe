@@ -2,7 +2,7 @@
 * @Author: E2
 * @Date:   2018-06-01 15:29:26
 * @Last Modified by:   E2
-* @Last Modified time: 2018-07-30 20:52:56
+* @Last Modified time: 2018-07-31 15:24:13
 */
 // 添加hogan组件用于渲染
 var Hogan =require('hogan.js');

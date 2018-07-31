@@ -2,10 +2,10 @@
 * @Author: E2
 * @Date:   2017-10-26 11:46:21
 * @Last Modified by:   E2
-* @Last Modified time: 2018-07-31 10:50:17
+* @Last Modified time: 2017-10-26 17:22:10
 */
 
-
+'use strict';
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
