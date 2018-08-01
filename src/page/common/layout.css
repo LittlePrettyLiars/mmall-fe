@@ -1,117 +1,162 @@
-/*
-* @Author: E2
-* @Date:   2017-10-12 10:30:29
-* @Last Modified by:   E2
-* @Last Modified time: 2018-06-09 11:54:58
-*/
-/* css reset */
-*{
-	margin: 0;
-	padding: 0;
-}
-body{
-	background: #f6f6f6;
-	font: 12px/1.5 tahoma,arial,Microsoft YaHei, sans-serif;
-}
-li{
-	list-style: none;
-}
-img{
-	display: block;
-	border: none;
-}
-label{
-	cursor: pointer;
-}
-input[type='checkbox']{
-	cursor: pointer;
+/* css resert  */
+
+* {
+    padding: 0;
+    margin: 0;
 }
 
-/* 定宽布局 */
-/* overflow:hidden实现的效果：
-1.超出边界的东西不显示
-2.清除浮动
-原理：如果容器里只有两个float元素，不加这句则容器没有高度*/
-.w{
-	width: 1080px;
-	margin:0 auto;
-	position: relative;
-	overflow: hidden;
+body {
+    background: #f6f6f6;
+    font: 12px/1.5 tahoma, arial, Microsoft YaHei, sans-serif;
 }
-/* 其实此处也可使用media查询，但因为上一种方法可以兼容IE，所以为了兼容推荐使用上一种方法 */
-/* @media screen and (max-width: 300px) {
-    body {
-        background-color:lightblue;
-    }
-} */
-/* panel */
-.panel{
-	padding: 10px;
-	margin-bottom: 10px;
-	background: #fff;
+
+li {
+    list-style: none;
 }
-.panel .panel-title{
-	padding: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	color: #666;
-	border-bottom: 1px solid #eee;
+
+img {
+    display: block;
+    border: none;
 }
-.panel .panel-body{
-	padding: 10px;
-	overflow: hidden;
+
+label {
+    cursor: pointer;
 }
-/* 全局通用样式 */
-/* 隐藏类 */
-.hide{
-	display: none;
+
+input[type="checkbox"] {
+    cursor: pointer;
 }
-/* 超链样式 */
-.link{
-	color: #999;
-	cursor: pointer;
-	text-decoration: none;
+
+
+/* 定宽布局  */
+
+.w {
+    width: 1080px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
 }
-.link:hover{
-	color: #e80012;
+
+
+/* 给外部容器设置最低高度  */
+
+.page-wrap {
+    min-height: 455px;
+    box-sizing: content-box;
 }
-.link{
-	color: #999;
+
+
+/* 全局通用样式  */
+
+
+/* 隐藏  */
+
+.hide {
+    display: none;
 }
-/* btn */
-/* 	height: 40px;
-	line-height: 40px;
-	两者一起使用的效果是文字垂直居中 
-*/
-.btn{
-	display: inline-block;
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	vertical-align: middle;
-	border: none;
-	background: #c60023;
-	font-size: 17px;
-	font-weight: bold;
-	color: #fff;
-	outline: none;
-	cursor: pointer;
-	text-decoration: none;
+
+
+/* 超链接  */
+
+.link {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
 }
-.btn-mini{
-	height: 25px;
-	line-height: 25px;
-	font-size: 12px;
-	padding: 0 10px;
+
+.link:hover {
+    color: #e80012;
 }
-/* loading */
-.loading{
-	margin:10px auto;
-	display: block;
-	width: 65px;
-	height: 65px;
-	border:1px solid #ddd;
-	border-radius: 5px;
-	background: url(../../image/icon/loading.gif) no-repeat;
-	opacity: .6;
+
+.link-text {
+    color: #999;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+    background-color: #c60023;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-min {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.loading {
+    margin: 10px auto;
+    display: block;
+    width: 65px;
+    height: 65px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: url("../../image/icon/loading.gif") no-repeat;
+    opacity: 0.6;
+}
+
+
+/* 面包屑导航  */
+
+.crumbs {
+    color: #888;
+    font-size: 14px;
+    background-color: rgba(220, 215, 215, 0.75);
+    background: linear-gradient(rgba(200, 196, 196, 0.30), rgba(151, 149, 149, 0.60));
+    padding: 10px 100px;
+    border-top: 2px solid #c60023;
+    /*margin-bottom: 15px;
+    height: 50px;
+    line-height: 50px;
+    background: #eee;
+    color: #888;
+    font-size: 14px;
+    padding: 0 410px;
+    border-top: 2px solid #c60023;*/
+}
+
+
+/*  panel */
+
+.panel {
+    /*background-color: white;
+    padding: 20px;
+    margin: 30px 0;*/
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+.panel .title {
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    /*border-bottom: 1px solid red;
+    padding-bottom: 10px;*/
+}
+
+
+/* 错误提示  */
+
+.err-tips {
+    margin-top: 30px;
+    padding: 30px;
+    font-size: 30px;
+    background-color: #eaeaea;
+    color: red;
+    text-align: center;
 }

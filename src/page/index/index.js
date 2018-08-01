@@ -1,20 +1,19 @@
-/*
-* @Author: E2
-<<<<<<< HEAD
-* @Date:   2018-05-30 15:38:57
-* @Last Modified by:   E2
-* @Last Modified time: 2018-07-31 15:28:32
-*/
-// require("./index.css");
-var _mm = require('util/mm.js');
+require("./index.css");
+var mm = require("util/mm.js");
+var tepalateBanner = require("./banner.string");
+// var tepalateBanner = require("./banner2.string");
+require("util/slider/index.js");
 
-require('page/common/nav/index.js');
-require('page/common/header/index.js');
-var navSide = require('page/common/nav-side/index.js');
-var _mm = require('util/mm.js');
+$(function() {
+    bannerHmtl = mm.renderHtml(tepalateBanner);
+    $(".banner-con").html(bannerHmtl);
+    var unslider = $('.banner').unslider({
+        dots: true
+    });
+    $('.unslider-arrow').click(function() {
+        var fn = this.className.split(' ')[1];
 
-navSide.init({
-	name : 'pass-update'
+        //  Either do unslider.data('unslider').next() or .prev() depending on the className
+        unslider.data('unslider')[fn]();
+    });
 });
-
-
